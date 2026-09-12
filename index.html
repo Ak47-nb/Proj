@@ -116,6 +116,18 @@
             color: #23a6d5;
         }
 
+        .btn-share {
+            margin-top: 15px;
+            background: #25D366;
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-share:hover {
+            background: #128C7E;
+            color: #ffffff;
+        }
+
         #message {
             margin-top: 20px;
             font-size: 2rem;
@@ -164,7 +176,8 @@
         </div>
 
         <button class="btn-visit" onclick="afficherMessage()">Visiter</button>
-        <div id="message">✨ Excellent ! ✨</div>
+        <div id="message">✨ TRY AGAIN ! ✨</div>
+        <button class="btn-visit btn-share" onclick="partagerWhatsApp()">Partager sur WhatsApp 💬</button>
     </div>
 
     <!-- Scripts Popunder / Réseau publicitaire -->
@@ -176,7 +189,12 @@
             const message = document.getElementById('message');
             message.classList.toggle('show');
         }
+
+        function partagerWhatsApp() {
+            const texte = encodeURIComponent('Regarde cette page : ');
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://api.whatsapp.com/send?text=${texte}${url}`, '_blank');
+        }
     </script>
 </body>
-    </html>
-    
+</html>

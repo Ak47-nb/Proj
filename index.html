@@ -13,11 +13,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        html, body {
-            max-width: 100vw;
-            overflow-x: hidden; /* Empêche tout débordement horizontal */
-        }
-
         body {
             min-height: 100vh;
             display: flex;
@@ -27,6 +22,7 @@
             background-size: 400% 400%;
             animation: gradientBG 12s ease infinite;
             padding: 20px;
+            overflow: hidden;
             position: relative;
         }
 
@@ -48,7 +44,6 @@
             display: flex;
             justify-content: space-around;
             pointer-events: none;
-            overflow: hidden;
         }
 
         .emoji {
@@ -84,7 +79,6 @@
             align-items: center;
             position: relative;
             z-index: 10;
-            overflow: hidden; /* Empêche les éléments internes de déborder de la carte */
         }
 
         .card h1 {
@@ -98,15 +92,9 @@
             margin-bottom: 25px;
             min-height: 60px;
             width: 100%;
-            max-width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Encadre strictement la bannière de pub */
-        }
-
-        .ad-container iframe {
-            max-width: 100% !important; /* Force l'iframe de la pub à s'adapter sur écran mobile */
         }
 
         .btn-visit {
@@ -179,7 +167,7 @@
         <div id="message">✨ Excellent ! ✨</div>
     </div>
 
-    <!-- Scripts Popunder / Réseau publicitaire (Conservés) -->
+    <!-- Scripts Popunder / Réseau publicitaire -->
     <script type="text/javascript" src="https://pl31295417.profitableratecpmnetwork.com/d0/9c/97/d09c97569a8d24ef2122d37226469387.js"></script>
     <script type="text/javascript" src="https://pl31295418.profitableratecpmnetwork.com/c9/24/fb/c924fbacbaea585001479cfa19d4a81e.js"></script>
 
@@ -190,4 +178,4 @@
         }
     </script>
 </body>
-</html>
+    </html>

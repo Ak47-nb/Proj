@@ -191,10 +191,11 @@
         }
 
         function partagerWhatsApp() {
-            const texte = encodeURIComponent('Regarde cette page : ');
-            const url = encodeURIComponent(window.location.href);
-            window.open(`https://api.whatsapp.com/send?text=${texte}${url}`, '_blank');
+            const messageTexte = `🔥 Découvrez nos contenus\n\nUne sélection de contenus à découvrir dès maintenant. Cliquez ci-dessous pour continuer 👇\n\n${window.location.href}`;
+            const urlFinale = `https://api.whatsapp.com/send?text=${encodeURIComponent(messageTexte)}`;
+            window.open(urlFinale, '_blank');
         }
     </script>
 </body>
 </html>
+
